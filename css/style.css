@@ -1,0 +1,157 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+
+.mb32 {
+  margin-bottom: 32px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.mb48 {
+  margin-bottom: 48px;
+}
+
+@font-face {
+  font-family: "Windows 95";
+  src: url("../fonts/w95fa.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.red {
+  color: #ff0000;
+}
+
+.blue {
+  color: #0000ff;
+}
+
+.red-dark {
+  color: #800000;
+}
+
+* {
+  font-family: "Windows 95", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #eaeaea;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.calculator {
+  padding: 24px;
+  background: #c0c0c0;
+  border-width: 3px;
+  border-style: solid;
+  border-right-color: #606f6f;
+  border-bottom-color: #606f6f;
+  border-top-color: #f1f1f1;
+  border-left-color: #f1f1f1;
+  max-width: 427.5px;
+}
+.calculator .screen .result {
+  width: 100%;
+  max-width: 100%;
+  height: 68px;
+  text-align: right;
+  padding: 16px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border-width: 3px;
+  border-style: solid;
+  border-right-color: #f1f1f1;
+  border-bottom-color: #f1f1f1;
+  border-top-color: #606f6f;
+  border-left-color: #606f6f;
+}
+.calculator .buttons {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.calculator .buttons button {
+  font-size: 32px;
+  font-weight: bold;
+}
+.calculator .buttons button:hover {
+  cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+  padding: 0.6rem 2rem;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  background: transparent;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.btn:before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #f1f1f1;
+  border-left: 2px solid #f1f1f1;
+  border-right: 2px solid #606f6f;
+  border-bottom: 2px solid #606f6f;
+}
+
+.btn:not(:disabled):not(.disabled):active:before,
+.btn:not(:disabled):not(.disabled):active:focus:before {
+  border-color: transparent;
+}
+
+.btn-primary {
+  background-color: #c0c0c0;
+  border-color: #a0a0a0;
+}
+
+.btn-primary:hover {
+  background-color: #c0c0c0;
+  border-color: #a0a0a0;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: none;
+}

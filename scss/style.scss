@@ -1,0 +1,137 @@
+@import 'reset';
+@import 'utilities';
+
+@font-face {
+  font-family: 'Windows 95';
+  src: url('../fonts/w95fa.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$red: #ff0000;
+$blue: #0000ff;
+$red-dark: #800000;
+$grey: #c0c0c0;
+$grey-dark: #606f6f;
+$white: #fff;
+$white-dark: #f1f1f1;
+$black: #000;
+
+.red {
+  color: $red;
+}
+.blue {
+  color: $blue;
+}
+.red-dark {
+  color: $red-dark;
+}
+
+* {
+  font-family: 'Windows 95', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #eaeaea;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.calculator {
+  padding: 24px;
+  background: $grey;
+  border-width: 3px;
+  border-style: solid;
+  border-right-color: $grey-dark;
+  border-bottom-color: $grey-dark;
+  border-top-color: $white-dark;
+  border-left-color: $white-dark;
+  max-width: 427.5px;
+
+  .screen {
+    .result {
+      width: 100%;
+      max-width: 100%;
+      height: 68px;
+      text-align: right;
+      padding: 16px;
+      font-size: 32px;
+      font-weight: bold;
+      color: $black;
+      background-color: $white;
+      border-width: 3px;
+      border-style: solid;
+      border-right-color: $white-dark;
+      border-bottom-color: $white-dark;
+      border-top-color: $grey-dark;
+      border-left-color: $grey-dark;
+    }
+  }
+  .buttons {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    button {
+      font-size: 32px;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Win 95 button style
+// https://demo.themesberg.com/windows-95-ui-kit/docs/introduction.html
+.btn {
+  position: relative;
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+  padding: 0.6rem 2rem;
+}
+
+.btn:before,
+.btn:after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  background: transparent;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.btn:before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid $white-dark;
+  border-left: 2px solid $white-dark;
+  border-right: 2px solid $grey-dark;
+  border-bottom: 2px solid $grey-dark;
+}
+
+.btn:not(:disabled):not(.disabled):active:before,
+.btn:not(:disabled):not(.disabled):active:focus:before {
+  border-color: transparent;
+}
+
+.btn-primary {
+  background-color: #c0c0c0;
+  border-color: #a0a0a0;
+}
+
+.btn-primary:hover {
+  background-color: #c0c0c0;
+  border-color: #a0a0a0;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: none;
+}
