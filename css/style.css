@@ -80,6 +80,9 @@ body {
   border-bottom-color: #f1f1f1;
   border-top-color: #606f6f;
   border-left-color: #606f6f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 480px) {
   .calculator .screen .result {

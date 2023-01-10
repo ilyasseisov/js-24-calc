@@ -76,6 +76,9 @@ body {
       border-bottom-color: $white-dark;
       border-top-color: $grey-dark;
       border-left-color: $grey-dark;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       @media (max-width: 480px) {
         font-size: 24px;
