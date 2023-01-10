@@ -52,6 +52,11 @@ body {
   border-left-color: $white-dark;
   max-width: 427.5px;
 
+  @media (max-width: 480px) {
+    padding: 12px;
+    max-width: 240px;
+  }
+
   .screen {
     .result {
       width: 100%;
@@ -69,6 +74,12 @@ body {
       border-bottom-color: $white-dark;
       border-top-color: $grey-dark;
       border-left-color: $grey-dark;
+
+      @media (max-width: 480px) {
+        font-size: 24px;
+        height: 48px;
+        line-height: 16px;
+      }
     }
   }
   .buttons {
@@ -76,11 +87,16 @@ body {
     gap: 8px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+
     button {
       font-size: 32px;
       font-weight: bold;
       &:hover {
         cursor: pointer;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
       }
     }
   }
@@ -91,8 +107,11 @@ body {
 .btn {
   position: relative;
   transition: all 0.2s ease;
-  letter-spacing: 0.025em;
   padding: 0.7rem 2.1rem;
+
+  @media (max-width: 480px) {
+    padding: 0.35rem 1rem;
+  }
 }
 
 .btn:before,

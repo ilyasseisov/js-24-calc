@@ -77,6 +77,12 @@ body {
   border-left-color: #f1f1f1;
   max-width: 427.5px;
 }
+@media (max-width: 480px) {
+  .calculator {
+    padding: 12px;
+    max-width: 240px;
+  }
+}
 .calculator .screen .result {
   width: 100%;
   max-width: 100%;
@@ -94,6 +100,13 @@ body {
   border-top-color: #606f6f;
   border-left-color: #606f6f;
 }
+@media (max-width: 480px) {
+  .calculator .screen .result {
+    font-size: 24px;
+    height: 48px;
+    line-height: 16px;
+  }
+}
 .calculator .buttons {
   display: grid;
   gap: 8px;
@@ -107,12 +120,21 @@ body {
 .calculator .buttons button:hover {
   cursor: pointer;
 }
+@media (max-width: 480px) {
+  .calculator .buttons button {
+    font-size: 20px;
+  }
+}
 
 .btn {
   position: relative;
   transition: all 0.2s ease;
-  letter-spacing: 0.025em;
   padding: 0.7rem 2.1rem;
+}
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.35rem 1rem;
+  }
 }
 
 .btn:before,

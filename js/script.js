@@ -60,6 +60,11 @@ const equalsFunction = () => {
   }
 
   result.textContent = a;
+
+  // non-standard behaviour
+  if (a === '' && b === '') {
+    edgeCase('0');
+  }
 };
 
 const enterOperation = (event) => {
